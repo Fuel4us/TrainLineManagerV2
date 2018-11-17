@@ -1,7 +1,7 @@
 /*
 * A collection of graph algorithms.
  */
-package graphbase;
+package GraphSupport;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

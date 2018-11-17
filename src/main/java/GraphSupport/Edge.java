@@ -1,4 +1,4 @@
-package graphbase;
+package GraphSupport;
 
 import java.lang.reflect.Array;
 
@@ -145,7 +145,6 @@ public class Edge<V, E> implements Comparable {
         return true;
     }
 
-    @Override
     public int compareTo(Object otherObject) {
 
         Edge<V, E> other = (Edge<V, E>) otherObject;
@@ -158,7 +157,7 @@ public class Edge<V, E> implements Comparable {
         return 1;
     }
 
-    @Override
+
     public Edge<V, E> clone() {
 
         Edge<V, E> newEdge = new Edge<>();
@@ -171,7 +170,6 @@ public class Edge<V, E> implements Comparable {
         return newEdge;
     }
 
-    @Override
     public String toString() {
         String st = "";
         if (element != null) {
