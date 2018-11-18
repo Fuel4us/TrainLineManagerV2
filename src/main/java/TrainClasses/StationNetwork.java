@@ -21,7 +21,6 @@ public class StationNetwork {
 
     Graph<Station, String> stationGraph = new Graph<>(true);
     ArrayList<Station> CentralStationList = new ArrayList<>();
-    // GraphAlgorithms algorithms = new GraphAlgorithms();
 
     public void read(String Coordinates, String LinesAndStations, String Connections) throws FileNotFoundException {
         readCoordinates(new File(Coordinates));

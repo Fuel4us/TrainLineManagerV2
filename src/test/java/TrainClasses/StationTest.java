@@ -17,7 +17,7 @@ public class StationTest {
     }
 
     @Test
-    public void ensureHashCodeReturnsSuccessfully () throws Exception {
+    public void ensureHashCodeReturnsSuccessfully () {
         int expected = station.hashCode();
         int result = station1.hashCode();
         int result2 = notStation.hashCode();

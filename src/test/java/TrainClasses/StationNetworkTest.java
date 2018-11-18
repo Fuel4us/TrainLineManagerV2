@@ -30,7 +30,7 @@ public class StationNetworkTest {
         Station station44 = new Station("D", 14, 22);
         Station station55 = new Station("E", 123, 2.5);
         Station station66 = new Station("F", 8.1, 9.2);
-        
+
         stationGraphTest.insertVertex(station11);
         stationGraphTest.insertVertex(station22);
         stationGraphTest.insertVertex(station33);
