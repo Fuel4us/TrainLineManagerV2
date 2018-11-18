@@ -25,24 +25,17 @@ public class Station {
     }
 
     @Override
-    public boolean equals(Object otherObject) {
-        if (this == otherObject) {
-            return true;
-        }
-
-        if (otherObject == null || this.getClass() != otherObject.getClass()) {
-            return false;
-        }
-        Station otherEstacao = (Station) otherObject;
-
-        return this.name.compareTo(otherEstacao.name) == 0 && this.code.compareTo(otherEstacao.code) == 0;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Station station = (Station) o;
+        return Objects.equals(name, station.name) &&
+                Objects.equals(code, station.code);
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.name);
-        hash = 37 * hash + Objects.hashCode(this.code);
-        return hash;
+        return Objects.hash(this.name, this.code);
     }
+
 }
