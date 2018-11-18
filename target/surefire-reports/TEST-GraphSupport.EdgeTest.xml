@@ -65,14 +65,14 @@
   <testcase classname="GraphSupport.EdgeTest" name="testGetVDest" time="0.002"/>
   <testcase classname="GraphSupport.EdgeTest" name="testGetVOrig" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testGetElement" time="0"/>
-  <testcase classname="GraphSupport.EdgeTest" name="testClone" time="0"/>
+  <testcase classname="GraphSupport.EdgeTest" name="testClone" time="0.001"/>
   <testcase classname="GraphSupport.EdgeTest" name="testToString" time="0.002"/>
   <testcase classname="GraphSupport.EdgeTest" name="testGetEndpoints" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testCompareTo" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testSetElement" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testEquals" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testSetWeight" time="0"/>
-  <testcase classname="GraphSupport.EdgeTest" name="testGetWeight" time="0.001"/>
+  <testcase classname="GraphSupport.EdgeTest" name="testGetWeight" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testSetVDest" time="0"/>
   <testcase classname="GraphSupport.EdgeTest" name="testSetVOrig" time="0"/>
 </testsuite>

@@ -79,24 +79,14 @@ public class StationNetwork {
         return desconexo(map);
     }
 
-    private Set<Station> filtrarAlcance(LinkedList<Station> alcacList) {
-        Set<Station> list = new HashSet<>();
-        for (Station e : alcacList) {
-            if (e.code.equals("Central")) {
-                list.add(e);
-            }
-        }
-        return list;
-    }
-
     private Map<Station, Set<Station>> conexo() {
         Map<Station, Set<Station>> map = new HashMap<>();
         for (Station vertex : stationGraph.vertices()) {
             if (vertex.code.equals("Central")) {
                 LinkedList<Station> maxReach = GraphAlgorithms.BreadthFirstSearch(stationGraph, vertex);
                 if (maxReach != null) {
-                    Set<Station> alcacSet = filtrarAlcance(maxReach);
-                    map.put(vertex, alcacSet);
+                    Set<Station> reachList = filtrarAlcance(maxReach);
+                    map.put(vertex, reachList);
                 }
                 return null;
             }
@@ -107,6 +97,16 @@ public class StationNetwork {
             }
         }
         return null;
+    }
+
+    private Set<Station> filtrarAlcance(LinkedList<Station> alcacList) {
+        Set<Station> list = new HashSet<>();
+        for (Station e : alcacList) {
+            if (e.code.equals("Central")) {
+                list.add(e);
+            }
+        }
+        return list;
     }
 
     private List<Set<Station>> desconexo(Map<Station, Set<Station>> map) {

@@ -12,8 +12,10 @@ public class StationTest {
 
     @Test
     public void equals() {
-        assertEquals(station, station1);
-        assertNotEquals(station, notStation);
+        boolean result = station.equals(station1);
+        boolean result2 = station.equals(notStation);
+        assertTrue(result);
+        assertFalse(result2);
     }
 
     @Test

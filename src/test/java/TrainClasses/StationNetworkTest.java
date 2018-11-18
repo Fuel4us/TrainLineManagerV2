@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -73,6 +75,18 @@ public class StationNetworkTest {
         /* Coordinate reader TEST */
         assertEquals(stationNetwork.centralStationList, CentralStationList);
 
+
+    }
+
+    @Test
+    public void isConexoRetursNull() {
+        List<Set<Station>> expResult = null;
+        List<Set<Station>> result = stationNetwork.isConexo();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void isConexoReturnsMap() {
 
     }
 }
