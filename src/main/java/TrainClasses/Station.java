@@ -38,4 +38,13 @@ public class Station {
         return Objects.hash(this.name, this.code);
     }
 
+    @Override
+    public String toString() {
+        return "Station{" +
+                "name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
+    }
 }

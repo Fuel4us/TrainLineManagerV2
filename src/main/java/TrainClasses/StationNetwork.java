@@ -37,6 +37,7 @@ public class StationNetwork {
                     stationGraph.insertVertex(e);
                     Station centralStation = lookForStation(temp[1]);
                     stationGraph.insertEdge(e, centralStation, "Central", 0.0);
+                    stationGraph.insertEdge(centralStation, e, "Central", 0.0);
                 }
             }
     }
@@ -75,8 +76,11 @@ public class StationNetwork {
 
     public List<Set<Station>> isConexo() {
         Map<Station, Set<Station>> map = conexo();
-        if (map == null) return null;
-        return desconexo(map);
+        if (map == null)  {
+            return null;
+        } else {
+            return notConexo(map);
+        }
     }
 
     private Map<Station, Set<Station>> conexo() {
@@ -84,11 +88,8 @@ public class StationNetwork {
         for (Station vertex : stationGraph.vertices()) {
             if (vertex.code.equals("Central")) {
                 LinkedList<Station> maxReach = GraphAlgorithms.BreadthFirstSearch(stationGraph, vertex);
-                if (maxReach != null) {
-                    Set<Station> reachList = filtrarAlcance(maxReach);
-                    map.put(vertex, reachList);
-                }
-                return null;
+                Set<Station> alcacSet = filtrarAlcance(maxReach);
+                map.put(vertex, alcacSet);
             }
         }
         for (Map.Entry<Station, Set<Station>> entry : map.entrySet()) {
@@ -97,11 +98,12 @@ public class StationNetwork {
             }
         }
         return null;
+
     }
 
-    private Set<Station> filtrarAlcance(LinkedList<Station> alcacList) {
+    private Set<Station> filtrarAlcance(LinkedList<Station> maxReach) {
         Set<Station> list = new HashSet<>();
-        for (Station e : alcacList) {
+        for (Station e : maxReach) {
             if (e.code.equals("Central")) {
                 list.add(e);
             }
@@ -109,17 +111,18 @@ public class StationNetwork {
         return list;
     }
 
-    private List<Set<Station>> desconexo(Map<Station, Set<Station>> map) {
+    private List<Set<Station>> notConexo(Map<Station, Set<Station>> map) {
         List<Set<Station>> subGrafos = new ArrayList<>();
-        ArrayList<Station> centralStationTemp = new ArrayList<>(centralStationList);
-        for (int i = 0; i < centralStationTemp.size(); i++) {
-            Set<Station> temp = map.get(centralStationTemp.get(i));
-            Set<Station> sub = newSubGraph(centralStationTemp, temp);
+        ArrayList<Station> cloneListaEstacoesCentrais = new ArrayList<>(centralStationList);
+        for (int i = 0; i < cloneListaEstacoesCentrais.size(); i++) {
+            Set<Station> temp = map.get(cloneListaEstacoesCentrais.get(i));
+            Set<Station> sub = newSubGraph(cloneListaEstacoesCentrais, temp);
             if (!sub.isEmpty() && sub.size() != 1) {
                 subGrafos.add(sub);
             }
             i = -1;
         }
+        System.out.println(subGrafos); // efeitos de teste
         return subGrafos;
     }
 

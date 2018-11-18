@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -79,14 +80,30 @@ public class StationNetworkTest {
     }
 
     @Test
-    public void isConexoRetursNull() {
+    public void isConexoRetursConexo() {
         List<Set<Station>> expResult = null;
         List<Set<Station>> result = stationNetwork.isConexo();
         assertEquals(expResult, result);
     }
 
     @Test
-    public void isConexoReturnsMap() {
+    public void isConexoReturnsNotConexo() throws FileNotFoundException {
+        Station StationA = new Station("A", 1, 1);
+        Station StationB = new Station("B", 1, 1);
+        Station StationC = new Station("C", 1, 1);
+        Station StationD = new Station("D", 1, 1);
+        Station StationE = new Station("E", 1, 1);
+
+        StationNetwork instanceDesconexo = new StationNetwork();
+        instanceDesconexo.read("notConexoCoordinates.csv", "notConexoLines.csv", "notConexoConnections.csv");
+
+        Set<Station> set = new HashSet<>();
+        set.add(StationA);
+        set.add(StationB);
+        set.add(StationC);
+        set.add(StationD);
+        set.add(StationE);
+        assertTrue(instanceDesconexo.isConexo().contains(set));
 
     }
 }
