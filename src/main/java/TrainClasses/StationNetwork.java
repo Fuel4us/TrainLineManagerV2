@@ -20,7 +20,7 @@ import GraphSupport.GraphAlgorithms;
 public class StationNetwork {
 
     Graph<Station, String> stationGraph = new Graph<>(true);
-    ArrayList<Station> CentralStationList = new ArrayList<>();
+    ArrayList<Station> centralStationList = new ArrayList<>();
 
     public void read(String Coordinates, String LinesAndStations, String Connections) throws FileNotFoundException {
         readCoordinates(new File(Coordinates));
@@ -59,13 +59,13 @@ public class StationNetwork {
                 String line[] = read.nextLine().split(";");
                 if (line.length != 0 && line.length == 3) {
                     Station e = new Station(line[0], Double.parseDouble(line[1]), Double.parseDouble(line[2]));
-                    CentralStationList.add(e);
+                    centralStationList.add(e);
                 }
             }
     }
 
     private Station lookForStation(String name) {
-        for (Station e : CentralStationList) {
+        for (Station e : centralStationList) {
             if (e.name.equalsIgnoreCase(name.trim())) {
                 return e;
             }
@@ -74,51 +74,63 @@ public class StationNetwork {
     }
 
     public List<Set<Station>> isConexo() {
-        Map<Station, LinkedList<Station>> map = conexo();
-        if (map == null) {
-            return null;
-        } else {
-            return desconexo(map);
-        }
+        Map<Station, Set<Station>> map = conexo();
+        if (map == null) return null;
+        return desconexo(map);
     }
 
-    private Map<Station, LinkedList<Station>> conexo() {
-        Map<Station, LinkedList<Station>> map = new HashMap<>();
-        for (Station vertex : stationGraph.vertices()) {
-            if (vertex.code.equals("Central")) {
-                LinkedList<Station> alcacList = GraphAlgorithms.BreadthFirstSearch(stationGraph, vertex);
-                map.put(vertex, alcacList);
+    private Set<Station> filtrarAlcance(LinkedList<Station> alcacList) {
+        Set<Station> list = new HashSet<>();
+        for (Station e : alcacList) {
+            if (e.code.equals("Central")) {
+                list.add(e);
             }
         }
-        for (Map.Entry<Station, LinkedList<Station>> entry : map.entrySet()) {
-            if (entry.getValue().size() < stationGraph.numVertices() - 1) {
+        return list;
+    }
+
+    private Map<Station, Set<Station>> conexo() {
+        Map<Station, Set<Station>> map = new HashMap<>();
+        for (Station vertex : stationGraph.vertices()) {
+            if (vertex.code.equals("Central")) {
+                LinkedList<Station> maxReach = GraphAlgorithms.BreadthFirstSearch(stationGraph, vertex);
+                if (maxReach != null) {
+                    Set<Station> alcacSet = filtrarAlcance(maxReach);
+                    map.put(vertex, alcacSet);
+                }
+                return null;
+            }
+        }
+        for (Map.Entry<Station, Set<Station>> entry : map.entrySet()) {
+            if (entry.getValue().size() != centralStationList.size()) {
                 return map;
             }
         }
         return null;
-
     }
 
-    private List<Set<Station>> desconexo(Map<Station, LinkedList<Station>> map) {
-        List<Set<Station>> graphComponents = new ArrayList<>();
-        Station[] station = stationGraph.allkeyVerts();
-        for (int i = 0; i < station.length; i++) {
-            LinkedList<Station> temp = map.get(station[i]);
-            Set<Station> sub = newSubGraph(station, temp, i);
-            if (!sub.isEmpty()) {
-                graphComponents.add(sub);
+    private List<Set<Station>> desconexo(Map<Station, Set<Station>> map) {
+        List<Set<Station>> subGrafos = new ArrayList<>();
+        ArrayList<Station> centralStationTemp = new ArrayList<>(centralStationList);
+        for (int i = 0; i < centralStationTemp.size(); i++) {
+            Set<Station> temp = map.get(centralStationTemp.get(i));
+            Set<Station> sub = newSubGraph(centralStationTemp, temp);
+            if (!sub.isEmpty() && sub.size() != 1) {
+                subGrafos.add(sub);
             }
+            i = -1;
         }
-        return graphComponents;
+        return subGrafos;
     }
 
-    private Set<Station> newSubGraph(Station[] station, LinkedList<Station> temp, int i) {
+    private Set<Station> newSubGraph(ArrayList<Station> centralStationTemp, Set<Station> temp) {
         Set<Station> sub = new HashSet<>();
-        for (int j = i; i < station.length; i++) {
-            if (temp.contains(station[j])) {
-                sub.add(station[j]);
+        for (Station Station : centralStationTemp) {
+            if (temp.contains(Station)) {
+                sub.add(Station);
             }
         }
+        centralStationTemp.removeAll(sub);
         return sub;
     }
 

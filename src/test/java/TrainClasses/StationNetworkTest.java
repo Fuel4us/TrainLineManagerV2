@@ -71,7 +71,7 @@ public class StationNetworkTest {
         assertEquals(stationNetwork.stationGraph, stationGraphTest);
 
         /* Coordinate reader TEST */
-        assertEquals(stationNetwork.CentralStationList, CentralStationList);
+        assertEquals(stationNetwork.centralStationList, CentralStationList);
 
 
     }
