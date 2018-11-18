@@ -21,6 +21,7 @@ public class StationNetworkTest {
         ArrayList<Station> CentralStationList = new ArrayList<>();
 
         Station station1 = new Station("A", "1");
+        Station stationA1 = new Station("A", "2");
         Station station2 = new Station("B", "1");
         Station station3 = new Station("C", "1");
         Station station4 = new Station("D", "2");
@@ -41,6 +42,7 @@ public class StationNetworkTest {
         stationGraphTest.insertVertex(station55);
         stationGraphTest.insertVertex(station66);
         stationGraphTest.insertVertex(station1);
+        stationGraphTest.insertVertex(stationA1);
         stationGraphTest.insertVertex(station2);
         stationGraphTest.insertVertex(station3);
         stationGraphTest.insertVertex(station4);
@@ -48,11 +50,19 @@ public class StationNetworkTest {
         stationGraphTest.insertVertex(station6);
 
         stationGraphTest.insertEdge(station11, station1, "Central", 0);
+        stationGraphTest.insertEdge(station11, stationA1, "Central", 0);
+        stationGraphTest.insertEdge(station1, station11, "Central", 0);
+        stationGraphTest.insertEdge(stationA1, station11, "Central", 0);
         stationGraphTest.insertEdge(station22, station2, "Central", 0);
+        stationGraphTest.insertEdge(station2, station22, "Central", 0);
         stationGraphTest.insertEdge(station33, station3, "Central", 0);
+        stationGraphTest.insertEdge(station3, station33, "Central", 0);
         stationGraphTest.insertEdge(station44, station4, "Central", 0);
+        stationGraphTest.insertEdge(station4, station44, "Central", 0);
         stationGraphTest.insertEdge(station55, station5, "Central", 0);
+        stationGraphTest.insertEdge(station5, station55, "Central", 0);
         stationGraphTest.insertEdge(station66, station6, "Central", 0);
+        stationGraphTest.insertEdge(station6, station66, "Central", 0);
 
         stationGraphTest.insertEdge(station1, station2, "1", 5);
         stationGraphTest.insertEdge(station1, station3, "1", 3);
