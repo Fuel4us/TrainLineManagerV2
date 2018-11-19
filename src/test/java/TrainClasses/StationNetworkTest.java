@@ -35,6 +35,7 @@ public class StationNetworkTest {
         stationGraphTest.insertEdge(station1, station2, "1", 5);
         stationGraphTest.insertEdge(station1, station3, "1", 3);
         stationGraphTest.insertEdge(station2, station1, "1", 8);
+        stationGraphTest.insertEdge(station2, station4, "1", 3);
         stationGraphTest.insertEdge(station4, station5, "2", 2);
         stationGraphTest.insertEdge(station5, station6, "2", 4);
         stationGraphTest.insertEdge(station6, station4, "2", 2);
