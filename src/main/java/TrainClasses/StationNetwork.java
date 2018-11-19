@@ -33,11 +33,8 @@ public class StationNetwork {
             while (read.hasNext()) {
                 String temp[] = read.nextLine().split(";");
                 if (temp.length == 2) {
-                    Station e = new Station(temp[1], temp[0]);
-                    stationGraph.insertVertex(e);
-                    Station centralStation = lookForStation(temp[1]);
-                    stationGraph.insertEdge(e, centralStation, "Central", 0.0);
-                    stationGraph.insertEdge(centralStation, e, "Central", 0.0);
+                    Station e = lookForStation(temp[1]);
+                    e.addLine(temp[0]);
                 }
             }
     }
@@ -47,9 +44,9 @@ public class StationNetwork {
         while (read.hasNext()) {
             String line[] = read.nextLine().split(";");
             if (line.length == 4) {
-                Station e1 = new Station(line[1], line[0]);
-                Station e2 = new Station(line[2], line[0]);
-                stationGraph.insertEdge(e1, e2, e1.code, Double.parseDouble(line[3]));
+                Station e1 = lookForStation(line[1]);
+                Station e2 = lookForStation(line[2]);
+                stationGraph.insertEdge(e1, e2, e1.name + e2.name, Double.parseDouble(line[3]));
             }
         }
     }
@@ -65,7 +62,7 @@ public class StationNetwork {
             }
     }
 
-    private Station lookForStation(String name) {
+    public Station lookForStation(String name) {
         for (Station e : centralStationList) {
             if (e.name.equalsIgnoreCase(name.trim())) {
                 return e;
@@ -74,8 +71,8 @@ public class StationNetwork {
         return null;
     }
 
-    public List<Set<Station>> isConexo() {
-        Map<Station, Set<Station>> map = conexo();
+    public List<LinkedList<Station>> isConexo() {
+        Map<Station, LinkedList<Station>> map = conexo();
         if (map == null)  {
             return null;
         } else {
@@ -83,16 +80,13 @@ public class StationNetwork {
         }
     }
 
-    private Map<Station, Set<Station>> conexo() {
-        Map<Station, Set<Station>> map = new HashMap<>();
+    private Map<Station, LinkedList<Station>> conexo() {
+        Map<Station, LinkedList<Station>> map = new HashMap<>();
         for (Station vertex : stationGraph.vertices()) {
-            if (vertex.code.equals("Central")) {
                 LinkedList<Station> maxReach = GraphAlgorithms.BreadthFirstSearch(stationGraph, vertex);
-                Set<Station> alcacSet = filtrarAlcance(maxReach);
-                map.put(vertex, alcacSet);
-            }
+                map.put(vertex, maxReach);
         }
-        for (Map.Entry<Station, Set<Station>> entry : map.entrySet()) {
+        for (Map.Entry<Station, LinkedList<Station>> entry : map.entrySet()) {
             if (entry.getValue().size() != centralStationList.size()) {
                 return map;
             }
@@ -101,22 +95,12 @@ public class StationNetwork {
 
     }
 
-    private Set<Station> filtrarAlcance(LinkedList<Station> maxReach) {
-        Set<Station> list = new HashSet<>();
-        for (Station e : maxReach) {
-            if (e.code.equals("Central")) {
-                list.add(e);
-            }
-        }
-        return list;
-    }
-
-    private List<Set<Station>> notConexo(Map<Station, Set<Station>> map) {
-        List<Set<Station>> subGrafos = new ArrayList<>();
+    private List<LinkedList<Station>> notConexo(Map<Station, LinkedList<Station>> map) {
+        List<LinkedList<Station>> subGrafos = new ArrayList<>();
         ArrayList<Station> cloneListaEstacoesCentrais = new ArrayList<>(centralStationList);
         for (int i = 0; i < cloneListaEstacoesCentrais.size(); i++) {
-            Set<Station> temp = map.get(cloneListaEstacoesCentrais.get(i));
-            Set<Station> sub = newSubGraph(cloneListaEstacoesCentrais, temp);
+            LinkedList<Station> temp = map.get(cloneListaEstacoesCentrais.get(i));
+            LinkedList<Station> sub = newSubGraph(cloneListaEstacoesCentrais, temp);
             if (!sub.isEmpty() && sub.size() != 1) {
                 subGrafos.add(sub);
             }
@@ -126,8 +110,8 @@ public class StationNetwork {
         return subGrafos;
     }
 
-    private Set<Station> newSubGraph(ArrayList<Station> centralStationTemp, Set<Station> temp) {
-        Set<Station> sub = new HashSet<>();
+    private LinkedList<Station> newSubGraph(ArrayList<Station> centralStationTemp, LinkedList<Station> temp) {
+        LinkedList<Station> sub = new LinkedList<>();
         for (Station Station : centralStationTemp) {
             if (temp.contains(Station)) {
                 sub.add(Station);

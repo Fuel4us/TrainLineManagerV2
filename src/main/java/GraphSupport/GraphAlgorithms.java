@@ -293,4 +293,32 @@ public class GraphAlgorithms {
 
         return pathrev;
     }
+
+    public static <V, E> double shortestPathUnweighted(Graph<V, E> g, V vOrig, V vDest, LinkedList<V> shortPath) {
+        if (!g.validVertex(vOrig) || !g.validVertex(vDest)) {
+            return 0;
+        }
+
+        V[] vertices = (V[]) new Object[g.numVertices()];
+        int[] pathKeys = new int[g.numVertices()];
+        double[] dist = new double[g.numVertices()];
+        boolean[] visited = new boolean[g.numVertices()];
+
+        for (int i = 0; i < g.numVertices(); i++) {
+            visited[i] = false;
+            vertices[i] = null;
+            dist[i] = Double.MAX_VALUE;
+        }
+
+        for (V v : g.vertices()) {
+            vertices[g.getKey(v)] = v;
+        }
+
+        if (!visited[g.getKey(vDest)]) {
+            return 0;
+        }
+
+        getPath(g, vOrig, vDest, vertices, pathKeys, shortPath);
+        return dist[g.getKey(vDest)];
+    }
 }

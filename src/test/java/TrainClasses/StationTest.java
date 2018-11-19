@@ -6,9 +6,9 @@ import static org.junit.Assert.*;
 
 public class StationTest {
 
-    private Station station = new Station("Matosinhos Sul", "mts01");
-    private Station station1 = new Station("Matosinhos Sul", "mts01");
-    private Station notStation = new Station("Matosinhos Sul", "mts02");
+    private Station station = new Station("Matosinhos Sul", 1.0, 2.2);
+    private Station station1 = new Station("Matosinhos Sul", 1.0, 2.2);
+    private Station notStation = new Station("Matosinhos Boas", 0.0, 8);
 
     @Test
     public void equals() {

@@ -4,10 +4,7 @@ import GraphSupport.Graph;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -20,63 +17,33 @@ public class StationNetworkTest {
         Graph<Station, String> stationGraphTest = new Graph<>(true);
         ArrayList<Station> CentralStationList = new ArrayList<>();
 
-        Station station1 = new Station("A", "1");
-        Station stationA1 = new Station("A", "2");
-        Station station2 = new Station("B", "1");
-        Station station3 = new Station("C", "1");
-        Station station4 = new Station("D", "2");
-        Station station5 = new Station("E", "2");
-        Station station6 = new Station("F", "2");
+        Station station1 = new Station("A", 1, 1);
+        Station station2 = new Station("B", 1, 2);
+        Station station3 = new Station("C", 1,2);
+        Station station4 = new Station("D", 1, 2);
+        Station station5 = new Station("E", 3, 3);
+        Station station6 = new Station("F", 3, 3);
 
-        Station station11 = new Station("A", 2.0, 3.31);
-        Station station22 = new Station("B", 5.33, 6.66);
-        Station station33 = new Station("C", 8.1, 9.9);
-        Station station44 = new Station("D", 14, 22);
-        Station station55 = new Station("E", 123, 2.5);
-        Station station66 = new Station("F", 8.1, 9.2);
-
-        stationGraphTest.insertVertex(station11);
-        stationGraphTest.insertVertex(station22);
-        stationGraphTest.insertVertex(station33);
-        stationGraphTest.insertVertex(station44);
-        stationGraphTest.insertVertex(station55);
-        stationGraphTest.insertVertex(station66);
         stationGraphTest.insertVertex(station1);
-        stationGraphTest.insertVertex(stationA1);
         stationGraphTest.insertVertex(station2);
         stationGraphTest.insertVertex(station3);
         stationGraphTest.insertVertex(station4);
         stationGraphTest.insertVertex(station5);
         stationGraphTest.insertVertex(station6);
 
-        stationGraphTest.insertEdge(station11, station1, "Central", 0);
-        stationGraphTest.insertEdge(station11, stationA1, "Central", 0);
-        stationGraphTest.insertEdge(station1, station11, "Central", 0);
-        stationGraphTest.insertEdge(stationA1, station11, "Central", 0);
-        stationGraphTest.insertEdge(station22, station2, "Central", 0);
-        stationGraphTest.insertEdge(station2, station22, "Central", 0);
-        stationGraphTest.insertEdge(station33, station3, "Central", 0);
-        stationGraphTest.insertEdge(station3, station33, "Central", 0);
-        stationGraphTest.insertEdge(station44, station4, "Central", 0);
-        stationGraphTest.insertEdge(station4, station44, "Central", 0);
-        stationGraphTest.insertEdge(station55, station5, "Central", 0);
-        stationGraphTest.insertEdge(station5, station55, "Central", 0);
-        stationGraphTest.insertEdge(station66, station6, "Central", 0);
-        stationGraphTest.insertEdge(station6, station66, "Central", 0);
-
         stationGraphTest.insertEdge(station1, station2, "1", 5);
         stationGraphTest.insertEdge(station1, station3, "1", 3);
         stationGraphTest.insertEdge(station2, station1, "1", 8);
-        stationGraphTest.insertEdge(station4, station5, "1", 2);
-        stationGraphTest.insertEdge(station5, station6, "1", 4);
-        stationGraphTest.insertEdge(station6, station4, "1", 2);
+        stationGraphTest.insertEdge(station4, station5, "2", 2);
+        stationGraphTest.insertEdge(station5, station6, "2", 4);
+        stationGraphTest.insertEdge(station6, station4, "2", 2);
 
-        CentralStationList.add(station11);
-        CentralStationList.add(station22);
-        CentralStationList.add(station33);
-        CentralStationList.add(station44);
-        CentralStationList.add(station55);
-        CentralStationList.add(station66);
+        CentralStationList.add(station1);
+        CentralStationList.add(station2);
+        CentralStationList.add(station3);
+        CentralStationList.add(station4);
+        CentralStationList.add(station5);
+        CentralStationList.add(station6);
 
         stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv", "connectionsTest.csv");
 
@@ -85,14 +52,12 @@ public class StationNetworkTest {
 
         /* Coordinate reader TEST */
         assertEquals(stationNetwork.centralStationList, CentralStationList);
-
-
     }
 
     @Test
     public void isConexoRetursConexo() {
-        List<Set<Station>> expResult = null;
-        List<Set<Station>> result = stationNetwork.isConexo();
+        List<LinkedList<Station>> expResult = null;
+        List<LinkedList<Station>> result = stationNetwork.isConexo();
         assertEquals(expResult, result);
     }
 
@@ -103,17 +68,20 @@ public class StationNetworkTest {
         Station StationC = new Station("C", 1, 1);
         Station StationD = new Station("D", 1, 1);
         Station StationE = new Station("E", 1, 1);
+        Station StationF = new Station("F", 1, 1);
 
-        StationNetwork instanceDesconexo = new StationNetwork();
-        instanceDesconexo.read("notConexoCoordinates.csv", "notConexoLines.csv", "notConexoConnections.csv");
+        stationNetwork.read("notConexoCoordinates.csv", "notConexoLines.csv", "notConexoConnections.csv");
 
-        Set<Station> set = new HashSet<>();
+        List<LinkedList<Station>> expResult = new ArrayList<>();
+        LinkedList<Station> set = new LinkedList<>();
         set.add(StationA);
         set.add(StationB);
         set.add(StationC);
         set.add(StationD);
         set.add(StationE);
-        assertTrue(instanceDesconexo.isConexo().contains(set));
+        set.add(StationF);
+        expResult.add(set);
 
+        assertEquals(stationNetwork.isConexo(), expResult);
     }
 }
