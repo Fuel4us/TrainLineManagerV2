@@ -66,7 +66,7 @@
   <testcase classname="GraphSupport.GraphTest" name="testClone" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testEdges" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testNumEdges" time="0"/>
-  <testcase classname="GraphSupport.GraphTest" name="testToString" time="0"/>
+  <testcase classname="GraphSupport.GraphTest" name="testToString" time="0.001"/>
   <testcase classname="GraphSupport.GraphTest" name="testGetEdge" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testInDegree" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testEndVertices" time="0"/>
@@ -76,7 +76,7 @@
   <testcase classname="GraphSupport.GraphTest" name="testOpposite" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testNumVertices" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testIncomingEdges" time="0"/>
-  <testcase classname="GraphSupport.GraphTest" name="testEquals" time="0.001"/>
+  <testcase classname="GraphSupport.GraphTest" name="testEquals" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testOutDegree" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testInsertVertex" time="0"/>
   <testcase classname="GraphSupport.GraphTest" name="testOutgoingEdges" time="0"/>

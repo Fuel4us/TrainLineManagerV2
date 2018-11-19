@@ -47,7 +47,7 @@ public interface GraphInterface<V,E> {
   /**
    * Returns the number of edges leaving vertex v
    * For an undirected graph, this is the same result returned by inDegree
-   * @param v 
+   * @param vert
    * @return number of edges leaving vertex v, -1 if vertex doesn't exist  
    */
   int outDegree(V vert) ;
@@ -55,7 +55,7 @@ public interface GraphInterface<V,E> {
   /**
    * Returns the number of edges for which vertex v is the destination 
    * For an undirected graph, this is the same result returned by outDegree
-   * @param v 
+   * @param vert
    * @return number of edges leaving vertex v, -1 if vertex doesn't exist  
    */
   int inDegree(V vert) ;

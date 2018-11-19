@@ -16,7 +16,7 @@ public class GraphAlgorithms {
      * Performs breadth-first search of a Graph starting in a Vertex
      *
      * @param g Graph instance
-     * @param vInf information of the Vertex that will be the source of the
+     * @param vert information of the Vertex that will be the source of the
      * search
      * @return qbfs a queue with the vertices of breadth-first search
      */
@@ -121,8 +121,6 @@ public class GraphAlgorithms {
 
     /**
      * @param g Graph instance
-     * @param voInf information of the Vertex origin
-     * @param vdInf information of the Vertex destination
      * @return paths ArrayList with all paths from voInf to vdInf
      */
     public static <V, E> ArrayList<LinkedList<V>> allPaths(Graph<V, E> g, V vOrig, V vDest) {
@@ -143,7 +141,6 @@ public class GraphAlgorithms {
      * @param g Graph instance
      * @param vOrig Vertex that will be the source of the path
      * @param visited set of discovered vertices
-     * @param pathkeys minimum path vertices keys
      * @param dist minimum distances
      */
     protected static <V, E> void shortestPathLength(Graph<V, E> g, V vOrig, V[] vertices, boolean[] visited, int[] pathKeys, double[] dist) {
@@ -194,9 +191,9 @@ public class GraphAlgorithms {
      * is constructed from the end to the beginning
      *
      * @param g Graph instance
-     * @param voInf information of the Vertex origin
-     * @param vdInf information of the Vertex destination
-     * @param pathkeys minimum path vertices keys
+     * @param vOrig information of the Vertex origin
+     * @param vDest information of the Vertex destination
+     * @param pathKeys minimum path vertices keys
      * @param path stack with the minimum path (correct order)
      */
     protected static <V, E> void getPath(Graph<V, E> g, V vOrig, V vDest, V[] verts, int[] pathKeys, LinkedList<V> path) {

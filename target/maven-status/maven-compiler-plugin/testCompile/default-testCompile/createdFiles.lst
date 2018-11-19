@@ -1,1 +1,7 @@
+GraphSupport\VertexTest.class
+TrainClasses\StationTest.class
+GraphSupport\GraphAlgorithmsTest.class
 TrainClasses\PathTest.class
+GraphSupport\GraphTest.class
+GraphSupport\EdgeTest.class
+TrainClasses\StationNetworkTest.class

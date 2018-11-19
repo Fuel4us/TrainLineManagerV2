@@ -1,1 +1,8 @@
+GraphSupport\Edge.class
+GraphSupport\GraphAlgorithms.class
+GraphSupport\GraphInterface.class
+GraphSupport\Graph.class
 TrainClasses\Path.class
+TrainClasses\StationNetwork.class
+GraphSupport\Vertex.class
+TrainClasses\Station.class
