@@ -2,21 +2,21 @@ package TrainClasses;
 
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
 import static org.junit.Assert.*;
 
 public class PathTest {
-
     private LinkedList<Station> list = new LinkedList<>();
     private String startHour = "20:32";
-    private Path path = new Path(list, startHour);
-    private Path path2 = new Path(list, "20:45");
+    private Path path3 = new Path(list, startHour);
+    private Path path4 = new Path(list, "20:45");
 
     @Test
     public void equals() {
-        boolean result = path.equals(path2);
-        boolean result2 = path.equals(new Path(null, "02:34"));
+        boolean result = path3.equals(path4);
+        boolean result2 = path3.equals(new Path(null, "02:34"));
         assertTrue(result);
         assertFalse(result2);
     }
@@ -24,8 +24,8 @@ public class PathTest {
     @Test
     public void hashCodeSuccess() {
         Path testNot = new Path(null, "02:34");
-        int expected = path.hashCode();
-        int result = path2.hashCode();
+        int expected = path3.hashCode();
+        int result = path4.hashCode();
         assertEquals(expected, result);
         assertNotEquals(expected, testNot);
     }
@@ -40,16 +40,4 @@ public class PathTest {
         instance.addStep(prevStation, time);
         assertTrue(instance.pathTime.get(prevStation).equalsIgnoreCase("23:24"));
     }
-
-//    @Test
-//    public void shortestPathByStations() {
-//    }
-//
-//    @Test
-//    public void shortestPathTime() {
-//    }
-//
-//    @Test
-//    public void shortestPathLines() {
-//    }
 }

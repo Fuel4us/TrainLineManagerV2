@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 public class StationNetworkTest {
 
     private StationNetwork stationNetwork = new StationNetwork();
+    private Path path;
 
     @Test
     public void read() throws FileNotFoundException {
@@ -83,5 +84,20 @@ public class StationNetworkTest {
         expResult.add(set);
 
         assertEquals(stationNetwork.isConexo(), expResult);
+    }
+
+    @Test
+    public void shortestPathByStations() throws FileNotFoundException {
+        stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv","connectionsTest.csv");
+        path = stationNetwork.shortestPathByStations("A", "E", "16:20");
+        LinkedList<Station> stationLinkedList = new LinkedList<>();
+        Station A = new Station("A", 2.0, 3.0);
+        Station B = new Station("B",5.33,6.66);
+        Station E = new Station("E", 123.0, 2.5);
+        stationLinkedList.add(A);
+        stationLinkedList.add(B);
+        stationLinkedList.add(E);
+        Path instance = new Path(stationLinkedList, "16:20");
+        assertEquals(path, instance);
     }
 }

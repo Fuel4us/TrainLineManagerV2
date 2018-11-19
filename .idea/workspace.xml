@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f1e93a9-7f1f-4434-aa5d-434b264b26d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TrainClasses/Path.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsTest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrainClasses/Percurso.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrainClasses/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainClasses/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TrainClasses/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainClasses/Path.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TrainClasses/PercursoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TrainClasses/StationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainClasses/StationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GraphSupport/GraphAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GraphSupport/GraphAlgorithms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TrainClasses/Percurso.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TrainClasses/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TrainClasses/Station.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TrainClasses/StationNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TrainClasses/StationNetwork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/GraphSupport.EdgeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/GraphSupport.EdgeTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphSupport.EdgeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphSupport.EdgeTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphSupport.GraphTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GraphSupport.GraphTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TrainClasses.StationNetworkTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TrainClasses.StationNetworkTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TrainClasses.StationNetworkTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TrainClasses.StationNetworkTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TrainClasses.StationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TrainClasses.StationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TrainClasses/StationNetworkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TrainClasses/StationNetworkTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TrainClasses/StationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TrainClasses/StationTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,86 +33,59 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TLM" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="StationNetwork.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="693">
-                  <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PathTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="470">
-                  <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Path.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
-                  <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4008#4009#0" expanded="true" />
-                    <element signature="e#4057#4058#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GraphAlgorithms.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2089">
-                  <caret line="314" column="9" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Station.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Station.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#852#853#0" expanded="true" />
-                    <element signature="e#909#910#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Path.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Path.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#623#624#0" expanded="true" />
-                    <element signature="e#665#666#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StationNetwork.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="130" column="89" selection-start-line="130" selection-start-column="89" selection-end-line="130" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationNetworkTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="97" column="61" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coordinatesTest.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coordinatesTest.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GraphAlgorithms.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="324" column="90" selection-start-line="324" selection-start-column="82" selection-end-line="324" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Path.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -161,10 +117,10 @@
       <find>Station2</find>
       <find>instanceDesconexo</find>
       <find>stationTime</find>
+      <find>eI</find>
+      <find>instanteInicial</find>
     </findStrings>
     <replaceStrings>
-      <replace>CentralStationList</replace>
-      <replace>file</replace>
       <replace>stationList</replace>
       <replace>notConexo</replace>
       <replace>isConexo</replace>
@@ -193,6 +149,8 @@
       <replace>s1</replace>
       <replace>s2</replace>
       <replace>pathTime</replace>
+      <replace>startStation</replace>
+      <replace>state</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -207,20 +165,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/GraphSupport/Graph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GraphSupport/GraphInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/GraphSupport/Vertex.java" />
         <option value="$PROJECT_DIR$/src/main/java/GraphSupport/Edge.java" />
         <option value="$PROJECT_DIR$/src/test/java/GraphSupport/GraphTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/GraphSupport/EdgeTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java" />
         <option value="$PROJECT_DIR$/src/main/java/TrainClasses/Station.java" />
         <option value="$PROJECT_DIR$/src/test/java/TrainClasses/StationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TrainClasses/PercursoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/TrainClasses/Percurso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TrainClasses/Path.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GraphSupport/GraphInterface.java" />
         <option value="$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TrainClasses/Path.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java" />
+        <option value="$PROJECT_DIR$/connectionsTest.csv" />
+        <option value="$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java" />
       </list>
     </option>
   </component>
@@ -271,13 +230,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Tests">
           <expand>
             <path>
-              <item name="TLM" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TLM" type="616d4139:PackageViewModuleNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="TrainLineManagerV2" type="cbb8eebc:String" user="TrainLineManagerV2" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="TrainLineManagerV2" type="cbb8eebc:String" user="TrainLineManagerV2" />
+              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
             </path>
           </expand>
           <select />
@@ -335,28 +298,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TrainClasses" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphSupport" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Tests">
+      <pane id="PackagesPane">
+        <subPane>
           <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="TrainLineManagerV2" type="cbb8eebc:String" user="TrainLineManagerV2" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="TrainLineManagerV2" type="cbb8eebc:String" user="TrainLineManagerV2" />
-              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
+              <item name="TLM" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TLM" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,9 +353,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PathTest.addStep">
+  <component name="RunManager" selected="JUnit.StationNetworkTest.shortestPathByStations">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="PathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TLM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TrainClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="TrainClasses" />
+      <option name="MAIN_CLASS_NAME" value="TrainClasses.PathTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="PathTest.addStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TLM" />
@@ -421,7 +403,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="StationNetworkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PathTest.hashCodeSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TLM" />
       <extension name="coverage">
         <pattern>
@@ -432,31 +414,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TrainClasses" />
-      <option name="MAIN_CLASS_NAME" value="TrainClasses.StationNetworkTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="StationNetworkTest.isConexoReturnsNotConexo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TLM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TrainClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TrainClasses" />
-      <option name="MAIN_CLASS_NAME" value="TrainClasses.StationNetworkTest" />
-      <option name="METHOD_NAME" value="isConexoReturnsNotConexo" />
+      <option name="MAIN_CLASS_NAME" value="TrainClasses.PathTest" />
+      <option name="METHOD_NAME" value="hashCodeSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -467,7 +426,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="StationNetworkTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PathTest.shortestPathByStations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TLM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TrainClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="TrainClasses" />
+      <option name="MAIN_CLASS_NAME" value="TrainClasses.PathTest" />
+      <option name="METHOD_NAME" value="shortestPathByStations" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="StationNetworkTest.shortestPathByStations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TLM" />
       <extension name="coverage">
         <pattern>
@@ -479,30 +461,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TrainClasses" />
       <option name="MAIN_CLASS_NAME" value="TrainClasses.StationNetworkTest" />
-      <option name="METHOD_NAME" value="read" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="StationTest.ensureHashCodeReturnsSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TLM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TrainClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TrainClasses" />
-      <option name="MAIN_CLASS_NAME" value="TrainClasses.StationTest" />
-      <option name="METHOD_NAME" value="ensureHashCodeReturnsSuccessfully" />
+      <option name="METHOD_NAME" value="shortestPathByStations" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -552,19 +511,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.StationNetworkTest.isConexoReturnsNotConexo" />
-      <item itemvalue="JUnit.StationNetworkTest.read" />
-      <item itemvalue="JUnit.StationTest.ensureHashCodeReturnsSuccessfully" />
-      <item itemvalue="JUnit.StationNetworkTest" />
       <item itemvalue="JUnit.PathTest.addStep" />
+      <item itemvalue="JUnit.PathTest.hashCodeSuccess" />
+      <item itemvalue="JUnit.PathTest.shortestPathByStations" />
+      <item itemvalue="JUnit.PathTest" />
+      <item itemvalue="JUnit.StationNetworkTest.shortestPathByStations" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StationNetworkTest.shortestPathByStations" />
+        <item itemvalue="JUnit.PathTest" />
+        <item itemvalue="JUnit.PathTest.shortestPathByStations" />
         <item itemvalue="JUnit.PathTest.addStep" />
-        <item itemvalue="JUnit.StationNetworkTest.isConexoReturnsNotConexo" />
-        <item itemvalue="JUnit.StationNetworkTest.read" />
-        <item itemvalue="JUnit.StationNetworkTest" />
-        <item itemvalue="JUnit.StationTest.ensureHashCodeReturnsSuccessfully" />
+        <item itemvalue="JUnit.PathTest.hashCodeSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -587,7 +546,8 @@
       <workItem from="1542556829080" duration="14000" />
       <workItem from="1542556860175" duration="23000" />
       <workItem from="1542556899745" duration="15395000" />
-      <workItem from="1542583700366" duration="6625000" />
+      <workItem from="1542583700366" duration="6900000" />
+      <workItem from="1542652476149" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="Readers ready and tested. Class stationNetwork was fully modulated to not make same mistakes as before">
       <created>1542526117386</created>
@@ -631,43 +591,57 @@
       <option name="project" value="LOCAL" />
       <updated>1542572178362</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="almost done.">
+      <created>1542590427158</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542590427158</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixes to comments because intellij :shrug: .">
+      <created>1542590590447</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542590590447</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StationNetworkTest_isConexoReturnsNotConexo - 2018.11.19 at 00h 41m 34s.xml">
-      <configuration name="StationNetworkTest.isConexoReturnsNotConexo" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 13m 06s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StationNetworkTest_isConexoReturnsNotConexo - 2018.11.19 at 00h 42m 06s.xml">
-      <configuration name="StationNetworkTest.isConexoReturnsNotConexo" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 16m 45s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StationNetworkTest_isConexoReturnsNotConexo - 2018.11.19 at 00h 45m 06s.xml">
-      <configuration name="StationNetworkTest.isConexoReturnsNotConexo" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 17m 00s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StationNetworkTest_isConexoReturnsNotConexo - 2018.11.19 at 00h 45m 34s.xml">
-      <configuration name="StationNetworkTest.isConexoReturnsNotConexo" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 18m 17s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StationNetworkTest_isConexoReturnsNotConexo - 2018.11.19 at 00h 46m 21s.xml">
-      <configuration name="StationNetworkTest.isConexoReturnsNotConexo" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 18m 25s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PathTest_addStep - 2018.11.19 at 01h 15m 37s.xml">
-      <configuration name="PathTest.addStep" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 18m 31s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PathTest_addStep - 2018.11.19 at 01h 17m 45s.xml">
-      <configuration name="PathTest.addStep" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 33m 43s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PathTest_addStep - 2018.11.19 at 01h 18m 03s.xml">
-      <configuration name="PathTest.addStep" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 35m 34s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PathTest_addStep - 2018.11.19 at 01h 18m 17s.xml">
-      <configuration name="PathTest.addStep" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 37m 39s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PathTest_addStep - 2018.11.19 at 01h 18m 42s.xml">
-      <configuration name="PathTest.addStep" configurationId="JUnit" />
+    <history-entry file="StationNetworkTest_shortestPathByStations - 2018.11.19 at 19h 41m 20s.xml">
+      <configuration name="StationNetworkTest.shortestPathByStations" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37136000" />
+    <option name="totallyTimeSpent" value="41632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -687,13 +661,13 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12135417" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12135417" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39922103" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -704,32 +678,32 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15572916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,7 +722,9 @@
     <MESSAGE value="Tests for 1,2 done" />
     <MESSAGE value="Conexo and not conexo done :apple:" />
     <MESSAGE value="Reader fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reader fixed" />
+    <MESSAGE value="almost done." />
+    <MESSAGE value="Fixes to comments because intellij :shrug: ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes to comments because intellij :shrug: ." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -756,6 +732,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1265">
@@ -779,8 +772,6 @@
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4008#4009#0" expanded="true" />
-            <element signature="e#4057#4058#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -818,8 +809,6 @@
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -857,8 +846,6 @@
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,8 +883,6 @@
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -935,8 +920,6 @@
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -967,8 +950,6 @@
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1021,31 +1002,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="162" column="37" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GraphSupport/EdgeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1077,20 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2089">
-          <caret line="314" column="9" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connections.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1100,12 +1046,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Station.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="506">
           <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1120,49 +1064,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coordinatesTest.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectionsTest.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="7" />
+        <state relative-caret-position="3450">
+          <caret line="162" column="37" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="84" column="59" selection-start-line="84" selection-start-column="59" selection-end-line="84" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4008#4009#0" expanded="true" />
-            <element signature="e#4057#4058#0" expanded="true" />
-          </folding>
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1791">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/PathTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        <state relative-caret-position="141">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectionsTest.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphSupport/GraphAlgorithms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="324" column="90" selection-start-line="324" selection-start-column="82" selection-end-line="324" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coordinatesTest.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TrainClasses/StationNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="130" column="89" selection-start-line="130" selection-start-column="89" selection-end-line="130" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TrainClasses/StationNetworkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="97" column="61" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

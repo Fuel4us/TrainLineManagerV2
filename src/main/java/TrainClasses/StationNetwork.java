@@ -14,6 +14,8 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import GraphSupport.Edge;
 import GraphSupport.Graph;
 import GraphSupport.GraphAlgorithms;
 
@@ -119,6 +121,86 @@ public class StationNetwork {
         }
         centralStationTemp.removeAll(sub);
         return sub;
+    }
+
+    public Path shortestPathByStations(String startingStation, String finalStation, String startTime) {
+        Station s1 = lookForStation(startingStation);
+        Station s2 = lookForStation(finalStation);
+        LinkedList<Station> shortestPathVertex = new LinkedList<>();
+        //System.out.println(stationGraph); // test
+        GraphAlgorithms.shortestPathUnweighted(stationGraph, s1, s2, shortestPathVertex);
+        if (shortestPathVertex.isEmpty()) {
+            return null;
+        }
+        return addPercurso(shortestPathVertex, startTime);
+    }
+
+    private Path addPercurso(LinkedList<Station> shortestPathVertex, String startTime) {
+        Path path = new Path(shortestPathVertex, startTime);
+        double tempo = 0.0;
+        Station prevStation = shortestPathVertex.get(0);
+        for (Station station : shortestPathVertex) {
+            if (!prevStation.equals(station)) {
+                Edge e = stationGraph.getEdge(prevStation, station);
+                path.addStep(prevStation, (int) tempo);
+                tempo = tempo + e.getWeight();
+                prevStation = station;
+            }
+        }
+        path.addStep(prevStation, (int) tempo);
+        return path;
+    }
+
+    public Path shortestPathTime(String startStation, String endStation, String instanteInicial) {
+        Station eI = lookForStation(startStation);
+        Station eF = lookForStation(endStation);
+        LinkedList<Station> shortestPath = new LinkedList<>();
+        GraphAlgorithms.shortestPath(stationGraph, eI, eF, shortestPath);
+        if (shortestPath.isEmpty()) {
+            return null;
+        }
+        return addPercurso(shortestPath, instanteInicial);
+    }
+
+    /**
+     * Shortest path with minimum lines
+     * @return path
+     */
+    public Path shortestPathLines(String startStation, String endStation, String instanteInicial) { // MUDAR INSTANTE INICIAL
+        Station s1 = lookForStation(startStation);
+        Station s2 = lookForStation(endStation);
+        Graph<Station, String> newGraph = cloneGraph();
+        LinkedList shortestPath = new LinkedList();
+        GraphAlgorithms.shortestPath(newGraph, s1, s2, shortestPath);
+        if (shortestPath.isEmpty()) {
+            return null;
+        }
+        return addPercurso(shortestPath, instanteInicial);
+    }
+
+    private Graph<Station, String> cloneGraph() {
+        Graph<Station, String> newGraph = stationGraph.clone();
+        for (Edge<Station, String> edge : newGraph.edges()) {
+            Station s1 = edge.getVOrig();
+            Station s2 = edge.getVDest();
+            if (interception(s1, s2)) {
+                edge.setWeight(0);
+            } else {
+                edge.setWeight(1);
+            }
+        }
+        return newGraph;
+    }
+
+    private boolean interception(Station s1, Station s2) {
+        for (String s1Code : s1.line) {
+            for (String s2Code : s2.line) {
+                if (s1Code.equals(s2Code)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }
