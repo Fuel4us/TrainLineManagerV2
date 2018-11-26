@@ -101,4 +101,28 @@ public class StationNetworkTest {
         Path instance = new Path(stationLinkedList, "16:20");
         assertEquals(path, instance);
     }
+
+    /**
+     * Test of MinPathWithIntermediaryStat method, of class StationNetwork.
+     */
+    @Test
+    public void testMinPathWithIntermediaryStat() throws FileNotFoundException {
+        System.out.println("MinPathWithIntermediaryStat");
+        stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv","connectionsTest.csv");
+        Station StationA = new Station("A", 1, 1);
+        Station StationB = new Station("B", 1, 1);
+        Station StationC = new Station("C", 1, 1);
+        Station StationD = new Station("D", 1, 1);
+        Station StationE = new Station("E", 1, 1);
+        Station StationF = new Station("F", 1, 1);
+        String startStation = "A";
+        String endStation = "E";
+        LinkedList<Station> intermediary = new LinkedList<>();
+        intermediary.add(StationD);
+        Path result = stationNetwork.MinPathWithIntermediaryStat(startStation, endStation, intermediary);
+        Path expResult = stationNetwork.MinPathWithIntermediaryStat(startStation, endStation, intermediary);
+
+
+        assertEquals(expResult, result);
+    }
 }

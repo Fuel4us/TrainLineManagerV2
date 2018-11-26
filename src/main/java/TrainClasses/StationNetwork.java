@@ -192,6 +192,42 @@ public class StationNetwork {
         return newGraph;
     }
 
+    public Path MinPathWithIntermediaryStat(String startStation, String endStation, LinkedList<Station> intermediary) {
+        Station s1 = lookForStation(startStation);
+        Station s2 = lookForStation(endStation);
+        Path path = new Path(startStation);
+        intermediary.addFirst(s1);
+        LinkedList<Station> shortPathSmaller;
+        int smallest;
+
+        do {
+            List<LinkedList<Station>> listShortsPaths = new ArrayList<>();
+            for (Station TempStation : intermediary) {
+                shortPathSmaller = new LinkedList<>();
+                GraphAlgorithms.shortestPath(stationGraph, intermediary.get(0), TempStation, shortPathSmaller);
+                if (shortPathSmaller.size() > 1) {
+                    listShortsPaths.add(shortPathSmaller);
+                }
+            }
+            smallest = listShortsPaths.get(0).size();
+            shortPathSmaller = listShortsPaths.get(0);
+            for (LinkedList<Station> list : listShortsPaths) {
+                if (list.size() < smallest) {
+                    smallest = list.size();
+                    shortPathSmaller = list;
+                }
+            }
+            intermediary.remove(shortPathSmaller.getLast());
+            intermediary.remove(shortPathSmaller.getFirst());
+            intermediary.addFirst(shortPathSmaller.getLast());
+            shortPathSmaller.remove(shortPathSmaller.getLast());
+            path.stationLines.addAll(shortPathSmaller);
+        } while (intermediary.size() != 1);
+        GraphAlgorithms.shortestPath(stationGraph, intermediary.getFirst(), s2, shortPathSmaller);
+        path.stationLines.addAll(shortPathSmaller);
+        return path;
+    }
+
     private boolean interception(Station s1, Station s2) {
         for (String s1Code : s1.line) {
             for (String s2Code : s2.line) {
