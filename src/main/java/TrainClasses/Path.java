@@ -18,6 +18,8 @@ public class Path {
 
     public Path(String startHour) {
         this.startHour = startHour;
+        stationLines = new LinkedList<>();
+        pathTime = new HashMap<>();
     }
 
     public void addStep(Station prevStation, int tempo) {

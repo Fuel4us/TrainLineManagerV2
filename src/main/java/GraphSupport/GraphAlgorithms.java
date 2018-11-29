@@ -330,8 +330,8 @@ public class GraphAlgorithms {
             visited[g.getKey(vOrig)] = true;
             for (Edge<V, E> e : g.outgoingEdges(vOrig)) {
                 V vert = e.getVDest() != vOrig ? e.getVDest() : e.getVOrig();
-                if (!visited[g.getKey(vert)] && dist[g.getKey(vert)] > dist[g.getKey(vOrig)]) {
-                    dist[g.getKey(vert)] = dist[g.getKey(vOrig)];
+                if (!visited[g.getKey(vert)] && dist[g.getKey(vert)] > dist[g.getKey(vOrig)]+1) {
+                    dist[g.getKey(vert)] = dist[g.getKey(vOrig)]+1;
                     pathKeys[g.getKey(vert)] = g.getKey(vOrig);
                 }
             }
