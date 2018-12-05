@@ -151,6 +151,9 @@ public class StationNetwork {
         return path;
     }
 
+    /*
+    * Looks for the shortest path but weights the time from Station A to Station B. NOT TESTED
+    * */
     public Path shortestPathTime(String startStation, String endStation, String instanteInicial) {
         Station eI = lookForStation(startStation);
         Station eF = lookForStation(endStation);
@@ -163,10 +166,10 @@ public class StationNetwork {
     }
 
     /**
-     * Shortest path with minimum lines
+     * Looks for the shortest path but weights the amount of times you change Line. NOT TESTED
      * @return path
      */
-    public Path shortestPathLines(String startStation, String endStation, String instanteInicial) { // MUDAR INSTANTE INICIAL
+    public Path shortestPathLines(String startStation, String endStation, String instanteInicial) {
         Station s1 = lookForStation(startStation);
         Station s2 = lookForStation(endStation);
         Graph<Station, String> newGraph = cloneGraph();
@@ -176,8 +179,12 @@ public class StationNetwork {
             return null;
         }
         return addPercurso(shortestPath, instanteInicial);
-    }
+}
 
+    /**
+     * Clones the graph to change without breaking the original structure
+     * @return newGraph
+     */
     private Graph<Station, String> cloneGraph() {
         Graph<Station, String> newGraph = stationGraph.clone();
         for (Edge<Station, String> edge : newGraph.edges()) {
@@ -192,6 +199,13 @@ public class StationNetwork {
         return newGraph;
     }
 
+    /**
+     * Calculates the shortest path from point A to B and weights the {@link LinkedList} so it has to go through it.
+     * @param startStation initial station
+     * @param endStation end station
+     * @param intermediary Vertex that need to go through
+     * @return path
+     */
     public Path MinPathWithIntermediaryStat(String startStation, String endStation, LinkedList<Station> intermediary) {
         Station s1 = lookForStation(startStation);
         Station s2 = lookForStation(endStation);

@@ -13,6 +13,8 @@ public class StationNetworkTest {
     private StationNetwork stationNetwork = new StationNetwork();
     private Path path;
 
+
+    // Ex1
     @Test
     public void read() throws FileNotFoundException {
         Graph<Station, String> stationGraphTest = new Graph<>(true);
@@ -56,6 +58,7 @@ public class StationNetworkTest {
         assertEquals(stationNetwork.centralStationList, CentralStationList);
     }
 
+    // Ex2
     @Test
     public void isConexoRetursConexo() {
         List<LinkedList<Station>> expResult = null;
@@ -87,6 +90,7 @@ public class StationNetworkTest {
         assertEquals(stationNetwork.isConexo(), expResult);
     }
 
+    // Ex4
     @Test
     public void shortestPathByStations() throws FileNotFoundException {
         stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv","connectionsTest.csv");
@@ -124,5 +128,10 @@ public class StationNetworkTest {
 
 
         assertEquals(expResult, result);
+    }
+
+    @Test
+    public void shortestPathTime() throws FileNotFoundException {
+        stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv","connectionsTest.csv");
     }
 }

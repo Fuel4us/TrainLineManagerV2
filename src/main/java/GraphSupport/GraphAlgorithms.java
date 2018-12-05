@@ -237,7 +237,6 @@ public class GraphAlgorithms {
         return 0;
     }
 
-    //shortest-path between voInf and all other
     public static <V, E> boolean shortestPaths(Graph<V, E> g, V vOrig, ArrayList<LinkedList<V>> paths, ArrayList<Double> dists) {
 
         if (!g.validVertex(vOrig)) {
@@ -245,7 +244,7 @@ public class GraphAlgorithms {
         }
 
         int nverts = g.numVertices();
-        boolean[] visited = new boolean[nverts]; //default value: false
+        boolean[] visited = new boolean[nverts];
         int[] pathKeys = new int[nverts];
         double[] dist = new double[nverts];
         V[] vertices = g.allkeyVerts();
@@ -291,38 +290,38 @@ public class GraphAlgorithms {
         return pathrev;
     }
 
-    public static <V, E> double shortestPathUnweighted(Graph<V, E> g, V vOrig, V vDest, LinkedList<V> shortPath) {
-        if (!g.validVertex(vOrig) || !g.validVertex(vDest)) {
+    public static <V, E> double shortestPathUnweighted(Graph<V, E> graph, V vOrig, V vDest, LinkedList<V> shortPath) {
+        if (!graph.validVertex(vOrig) || !graph.validVertex(vDest)) {
             return 0;
         }
 
-        V[] vertices = (V[]) new Object[g.numVertices()];
-        int[] pathKeys = new int[g.numVertices()];
-        double[] dist = new double[g.numVertices()];
-        boolean[] visited = new boolean[g.numVertices()];
+        V[] vertices = (V[]) new Object[graph.numVertices()];
+        int[] pathKeys = new int[graph.numVertices()];
+        double[] dist = new double[graph.numVertices()];
+        boolean[] visited = new boolean[graph.numVertices()];
 
-        for (int i = 0; i < g.numVertices(); i++) {
+        for (int i = 0; i < graph.numVertices(); i++) {
             visited[i] = false;
             vertices[i] = null;
             dist[i] = Double.MAX_VALUE;
         }
 
-        for (V v : g.vertices()) {
-            vertices[g.getKey(v)] = v;
+        for (V v : graph.vertices()) {
+            vertices[graph.getKey(v)] = v;
         }
 
-        shortestPathUnweighted(g, vOrig, vertices, visited, pathKeys, dist);
+        shortestPathUnweighted(graph, vOrig, vertices, visited, pathKeys, dist);
         shortPath.clear();
 
-        if (!visited[g.getKey(vDest)]) {
+        if (!visited[graph.getKey(vDest)]) {
             return 0;
         }
 
-        getPath(g, vOrig, vDest, vertices, pathKeys, shortPath);
-        return dist[g.getKey(vDest)];
+        getPath(graph, vOrig, vDest, vertices, pathKeys, shortPath);
+        return dist[graph.getKey(vDest)];
     }
 
-    private static <V, E> void shortestPathUnweighted(Graph<V, E> g, V vOrig, V[] vertices, boolean[] visited, int[] pathKeys, double[] dist) {
+    private static <V, E> void shortestPathUnweighted(Graph<V, E> g, V vOrig, V[] o, boolean[] visited, int[] pathKeys, double[] dist) {
         int oKey = g.getKey(vOrig);
         dist[oKey] = 0;
 
