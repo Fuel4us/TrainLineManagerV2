@@ -8,12 +8,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import GraphSupport.Edge;
 import GraphSupport.Graph;
@@ -132,10 +130,10 @@ public class StationNetwork {
         if (shortestPathVertex.isEmpty()) {
             return null;
         }
-        return addPercurso(shortestPathVertex, startTime);
+        return addFinalPath(shortestPathVertex, startTime);
     }
 
-    private Path addPercurso(LinkedList<Station> shortestPathVertex, String startTime) {
+    private Path addFinalPath(LinkedList<Station> shortestPathVertex, String startTime) {
         Path path = new Path(shortestPathVertex, startTime);
         double tempo = 0.0;
         Station prevStation = shortestPathVertex.get(0);
@@ -148,7 +146,7 @@ public class StationNetwork {
             }
         }
         path.addStep(prevStation, (int) tempo);
-        System.out.println(path.toString());
+        System.out.println(path.toString()); // efeitos de teste
         return path;
     }
 
@@ -163,41 +161,7 @@ public class StationNetwork {
         if (shortestPath.isEmpty()) {
             return null;
         }
-        return addPercurso(shortestPath, instanteInicial);
-    }
-
-    /**
-     * Looks for the shortest path but weights the amount of times you change Line. NOT TESTED
-     * @return path
-     */
-    public Path shortestPathLines(String startStation, String endStation, String instanteInicial) {
-        Station s1 = lookForStation(startStation);
-        Station s2 = lookForStation(endStation);
-        Graph<Station, String> newGraph = cloneGraph();
-        LinkedList shortestPath = new LinkedList();
-        GraphAlgorithms.shortestPath(newGraph, s1, s2, shortestPath);
-        if (shortestPath.isEmpty()) {
-            return null;
-        }
-        return addPercurso(shortestPath, instanteInicial);
-}
-
-    /**
-     * Clones the graph to change without breaking the original structure
-     * @return newGraph
-     */
-    private Graph<Station, String> cloneGraph() {
-        Graph<Station, String> newGraph = stationGraph.clone();
-        for (Edge<Station, String> edge : newGraph.edges()) {
-            Station s1 = edge.getVOrig();
-            Station s2 = edge.getVDest();
-            if (interception(s1, s2)) {
-                edge.setWeight(0);
-            } else {
-                edge.setWeight(1);
-            }
-        }
-        return newGraph;
+        return addFinalPath(shortestPath, instanteInicial);
     }
 
     /**
@@ -241,17 +205,6 @@ public class StationNetwork {
         GraphAlgorithms.shortestPath(stationGraph, intermediary.getFirst(), s2, shortPathSmaller);
         path.stationLines.addAll(shortPathSmaller);
         return path;
-    }
-
-    private boolean interception(Station s1, Station s2) {
-        for (String s1Code : s1.line) {
-            for (String s2Code : s2.line) {
-                if (s1Code.equals(s2Code)) {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 
 }

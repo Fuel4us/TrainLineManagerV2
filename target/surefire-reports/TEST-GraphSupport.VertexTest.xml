@@ -67,10 +67,10 @@
   <testcase classname="GraphSupport.VertexTest" name="testClone" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testToString" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testGetAdjVert" time="0"/>
-  <testcase classname="GraphSupport.VertexTest" name="testGetEdge" time="0"/>
+  <testcase classname="GraphSupport.VertexTest" name="testGetEdge" time="0.001"/>
   <testcase classname="GraphSupport.VertexTest" name="testAddAdjVert" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testSetElement" time="0"/>
-  <testcase classname="GraphSupport.VertexTest" name="testEquals" time="0.001"/>
+  <testcase classname="GraphSupport.VertexTest" name="testEquals" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testGetKey" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testGetAllAdjVerts" time="0"/>
   <testcase classname="GraphSupport.VertexTest" name="testNumAdjVerts" time="0"/>
