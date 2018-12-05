@@ -133,5 +133,15 @@ public class StationNetworkTest {
     @Test
     public void shortestPathTime() throws FileNotFoundException {
         stationNetwork.read("coordinatesTest.csv", "linesAndStationsTest.csv","connectionsTest.csv");
+        Path expResult = stationNetwork.shortestPathTime("A", "E", "12:00");
+        Station A = new Station("A", 2.0, 3.0);
+        Station B = new Station("B",5.33,6.66);
+        Station E = new Station("E", 123.0, 2.5);
+        LinkedList<Station> stationLinkedList = new LinkedList<>();
+        stationLinkedList.add(A);
+        stationLinkedList.add(B);
+        stationLinkedList.add(E);
+        Path result = new Path(stationLinkedList, "12:00");
+        assertEquals(result, expResult);
     }
 }

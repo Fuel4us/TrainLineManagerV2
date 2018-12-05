@@ -148,6 +148,7 @@ public class StationNetwork {
             }
         }
         path.addStep(prevStation, (int) tempo);
+        System.out.println(path.toString());
         return path;
     }
 
